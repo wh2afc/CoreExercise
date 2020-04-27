@@ -26,9 +26,9 @@ namespace ExternalService.Connections.NamedClients
                 .Replace("{lon}", longitude);
 
             // Using Mock data to reduce number of hits to the service (or they'll shut me down)
-            return MockData.AllWeather;
+            //return MockData.AllWeather;
             
-            //return await ApiHelper.MakeAPICall(Client, HttpMethod.Get, url, ctoken);
+            return await ApiHelper.MakeAPICall(Client, HttpMethod.Get, url, ctoken);
         }
     }
 }
