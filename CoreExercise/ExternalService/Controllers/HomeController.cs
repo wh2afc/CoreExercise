@@ -66,6 +66,8 @@ namespace ExternalService.Controllers
                 try
                 {
                     model =  JsonConvert.DeserializeObject<OpenWeather>(results);
+                    if (model.Current == null)
+                        model.Fault = JsonConvert.DeserializeObject<FaultDM>(results);
                 }
                 catch (Exception ex)
                 {

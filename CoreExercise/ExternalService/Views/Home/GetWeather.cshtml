@@ -9,7 +9,7 @@
     </div>
     <div class="row">
         <div class="col-3 text-left">Temperature:</div>
-        <div class="col text-left">@Html.Raw($"{Model.Current.Temp:F0}&deg;F")</div>
+        <div class="col text-left">@Html.Raw($"{Model.Current?.Temp:F0}&deg;F")</div>
     </div>
 
     @*TODO: Add a "feels like" row.*@
